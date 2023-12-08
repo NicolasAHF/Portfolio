@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    color:#F5F5DC
+}
+
+.page-bg{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgb(66, 77, 77), #1E1E1E);
+    background-size: cover;
+}
+
+.mouse-circle,
+.mouse-dot{
+    border-radius: 50%;
+    position: fixed;
+    z-index: 300;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mouse-circle{
+    width: 5rem;
+    height: 5rem;
+    border: .1rem solid #F5F5DC;
+    animation: mouseCircleAnim 4s infinite ease-in-out; 
+}
+
+@keyframes mouseCircleAnim {
+    0%,50%, 100% {
+        width: 4rem;
+        height: 4rem;
+    }
+    25%, 70% {
+        width: 6rem;
+        height: 6rem;
+    }
+}
+
+.mouse-dot{
+    width: .5rem;
+    height: .5rem;
+    background-color: brown;
+}
+
+.section-1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+.logo{
+    position: absolute;
+    top: 2rem;
+    left: 5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #F5F5DC;
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.circle{
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+    background-color: red;
+    z-index: 200;
+    align-self: center;
+    justify-self: center;
+    opacity: 0.5;
+    position: relative;
+    top:0;
+    left: 0;
+    transition: left 2s, top 2s;
+}
+
+.circle-1{
+    background: url(images/books.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: .3rem dotted #F5F5DC;
+    margin-left: -10rem;
+}
+
+.circle-2{
+    background: url(images/devImage.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: .3rem dotted #F5F5DC;
+    margin-right: -10rem;
+}
+
+.circle-3{
+    background: url(images/travel.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: .3rem dotted #F5F5DC;
+    margin-left: -10rem;
+}
+
+.circle-4{
+    background: url(images/uruguay.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: .3rem dotted #F5F5DC;
+    margin-right: -10rem;
+}
+
+.main-circle{
+    width: 55rem;
+    height: 55rem;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid #F5F5DC;
+    transition: width .2s, height .2s;
+}
+
+.main-circle:hover{
+    width: 60rem;
+    height: 60rem;
+}
+
+.main-circle img{
+    width: 80rem;
+    height: 80rem;
+    position: relative;
+    top:0;
+    left: 0;
+    transition: left 2s, top 2s;
+}
+
+.featured-text{
+    font-size: 2rem;
+    text-transform: uppercase;
+    width: 0;
+    word-wrap: break-word;
+    line-height: 2;
+    position: sticky;
+    top: 0;
+}
+
+.featured-text-1{
+    margin: 0 auto 0 10rem;
+}
+
+.featured-text-2{
+    margin: 0 10rem 0 auto;
+}
+
+.main-btn{
+    position: absolute;
+    bottom: 3rem;
+    width: 10rem;
+    height: 10rem;
+    background-color: brown;
+    border-radius: 50%;
+    border: .3rem double #F5F5DC;
+    padding: .1rem;
+}
+
+.main-btn-content{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.main-btn-content:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.main-btn-content img{
+    width: 35%;
+    height: 40%;
+    transform: rotate(90deg);
+    transition: filter 0.3s ease;
+}
+
+.main-btn-content:hover img{
+    filter: brightness(0) invert(1);
+}
+
+.main-btn-content span{
+    position: absolute;
+    bottom: 1.5rem;
+    color: #F5F5DC;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+
